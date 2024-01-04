@@ -51,8 +51,16 @@ namespace SeleniumTests
             CreateNewAddress.Click();
 
 
+            //Store the web element
+            IWebElement iframe = wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector("[data-testid='userDeliveryAddressDialog']")));
+            
 
 
+
+
+            //Click on save button
+           IWebElement SaveButton = driver.FindElement(By.CssSelector("[data-testid='button-submit']"));
+            SaveButton.Click();
 
         }
     }
